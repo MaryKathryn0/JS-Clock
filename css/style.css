@@ -48,6 +48,23 @@ body {
 .clock .number10 { --rotation: 300deg; }
 .clock .number11 { --rotation: 330deg; }
 
+/* adding circle in middle of clock */
+.clock::after {
+    content: '';
+    position:absolute;
+    background-color: black;
+    /* z index higher then hands to make sure in front of */
+    z-index:11;
+    height:15px;
+    width: 15px;
+    border-radius: 50%;
+    /* to center going add top and left 50% */
+    top:50%;
+    left:50%;
+    /* slightly off so adding transform as we did on the hands */
+    transform: translate(-50%, -50%);
+}
+
 /* adding the hands */
 .clock .hand {
     /* make rotation default to 0 */
