@@ -15,7 +15,7 @@ body {
     height: 400px;
     background-color: rgb(150, 179, 233, .6);
     border-radius: 50%;
-    border: 5px solid hotpink;
+    border: 3px solid hotpink;
     /* margin:auto; */
     /* added relative position for clock numbers position as absolute */
     position:relative;
