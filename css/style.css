@@ -1,0 +1,24 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+body {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/146/087/original/vector-zebra-stripes-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin-top: 75px;
+}
+
+.clock {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(150, 179, 233, .9);
+    border-radius: 50%;
+    border: 5px solid hotpink;
+    margin:auto;
+}
+
+.clock .number {
+    
+}
