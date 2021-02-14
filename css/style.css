@@ -13,7 +13,7 @@ body {
 .clock {
     width: 400px;
     height: 400px;
-    background-color: rgb(150, 179, 233, .6);
+    background-color: rgb(150, 179, 233, .96);
     border-radius: 50%;
     border: 3px solid hotpink;
     /* margin:auto; */
@@ -35,8 +35,7 @@ body {
     transform: rotate(var(--rotation));
 }
 
-/* now we are going to select rotation for each individual number */
-
+/* here is where to select rotation for each individual number */
 .clock .number1 { --rotation: 30deg; }
 .clock .number2 { --rotation: 60deg; }
 .clock .number3 { --rotation: 90deg; }
@@ -48,3 +47,46 @@ body {
 .clock .number9 { --rotation: 270deg; }
 .clock .number10 { --rotation: 300deg; }
 .clock .number11 { --rotation: 330deg; }
+
+/* adding the hands */
+.clock .hand {
+    /* make rotation default to 0 */
+    --rotation:0;
+    position:absolute;
+    /* need to move the hands to the middle */
+    bottom: 50%;
+    left: 50%;
+    /* width: 10px;
+    height:50%; */
+    /* background-color: hotpink; */
+    border: 1px solid black;
+    /* make the top of hands curved by top left&right radius */
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+    /* use transform origin to make hands move from bottom of hand/center of clock*/
+    /* added calc and * 1deg to get hands moving when rotation is changed */
+    transform-origin: bottom;
+    /* to make sure hands always over numbers */
+    z-index:10;
+    /* the hands are slightly to the left- use transform */
+    /* use translate to move hand 50% backwards to center */
+    /* use rotate & variable rotation will use w/ javascript to make the hands rotate */
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+/* differentiating each hand size- height and width */
+.clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: hotpink;
+}
+.clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    background-color: black;
+}
+.clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: black;
+}
