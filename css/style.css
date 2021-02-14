@@ -6,7 +6,7 @@ body {
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/146/087/original/vector-zebra-stripes-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     /* margin-top: 75px; */
 }
 
