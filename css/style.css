@@ -7,18 +7,44 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    margin-top: 75px;
+    /* margin-top: 75px; */
 }
 
 .clock {
     width: 400px;
     height: 400px;
-    background-color: rgb(150, 179, 233, .9);
+    background-color: rgb(150, 179, 233, .6);
     border-radius: 50%;
     border: 5px solid hotpink;
-    margin:auto;
+    /* margin:auto; */
+    /* added relative position for clock numbers position as absolute */
+    position:relative;
 }
 
 .clock .number {
-    
+    /* and by default we want rotation value to 0  */
+    --rotation: 0;
+    position: absolute; 
+    /* to make rotation easier around the clock - width & height 100% */
+    width: 100%;
+    height: 100%;  
+    text-align: center;      
+    /* using transform to get the rest of the elements around the clock */
+    /* with transform we can use the rotate property - change in 30 degree incriment
+    going to use a variable called rotation - see default above*/
+    transform: rotate(var(--rotation));
 }
+
+/* now we are going to select rotation for each individual number */
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
