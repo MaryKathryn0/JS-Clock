@@ -37,6 +37,8 @@ body {
     /* with transform we can use the rotate property - change in 30 degree incriment
     going to use a variable called rotation - see default above*/
     transform: rotate(var(--rotation));
+    font-size: 2.2rem;
+    padding-top: 3px;
 }
 
 /* here is where to select rotation for each individual number */
